@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<PropertyList>
+    <generic>
+        <input>
+            <line_separator>\n</line_separator>
+            <var_separator>,</var_separator>
+
+            <chunk>
+                <name>throttle-left</name>
+                <type>float</type>
+                <node>/controls/engines/engine/throttle</node>
+            </chunk>
+            <chunk>
+                <name>throttle-right</name>
+                <type>float</type>
+                <node>/controls/engines/engine[1]/throttle</node>
+            </chunk>
+            <chunk>
+                <name>pitch-left</name>
+                <type>float</type>
+                <node>/controls/engines/engine/propeller-pitch</node>
+            </chunk>
+            <chunk>
+                <name>pitch-right</name>
+                <type>float</type>
+                <node>/controls/engines/engine[1]/propeller-pitch</node>
+            </chunk>
+            <chunk>
+                <name>mixture-left</name>
+                <type>float</type>
+                <node>/controls/engines/engine/mixture</node>
+            </chunk>
+            <chunk>
+                <name>mixture-right</name>
+                <type>float</type>
+                <node>/controls/engines/engine[1]/mixture</node>
+            </chunk>
+
+            <chunk>
+                <name>throttle-left-reverse</name>
+                <type>bool</type>
+                <node>/controls/engines/engine/reverser</node>
+            </chunk>
+            <chunk>
+                <name>throttle-right-reverse</name>
+                <type>bool</type>
+                <node>/controls/engines/engine[1]/reverser</node>
+            </chunk>
+            <chunk>
+                <name>pitch-left-feather</name>
+                <type>bool</type>
+                <node>/controls/engines/engine/propeller-feather</node>
+            </chunk>
+            <chunk>
+                <name>pitch-right-feather</name>
+                <type>bool</type>
+                <node>/controls/engines/engine[1]/propeller-feather</node>
+            </chunk>
+
+        </input>
+    </generic>
+</PropertyList>
