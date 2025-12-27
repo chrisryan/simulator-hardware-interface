@@ -72,20 +72,22 @@ const byte LandingGearLightRightPin = 38;
 const byte HobbsRunningPin = 24;
 
 // Input Pins - Analog
-const byte InterTurbineTempLeftPin = 2;
-const byte TorqueLeftPin = 3;
-const byte PropRpmLeftPin = 4;
-const byte PercentRpmLeftPin = 5;
+const byte InterTurbineTempLeftPin = 4;
+const byte TorqueLeftPin = 2;
+const byte PropRpmLeftPin = 5;
+const byte PercentRpmLeftPin = 3;
 const byte FuelFlowPphLeftPin = 6;
-const byte OilTempLeftPin = 7;
-const byte OilPressLeftPin = 8;
-const byte InterTurbineTempRightPin = 9;
-const byte TorqueRightPin = 10;
-const byte PropRpmRightPin = 11;
-const byte PercentRpmRightPin = 12;
+const byte OilTempLeftPin = 8;
+const byte OilPressLeftPin = 7;
+
+const byte InterTurbineTempRightPin = 11;
+const byte TorqueRightPin = 9;
+const byte PropRpmRightPin = 12;
+const byte PercentRpmRightPin = 10;
 const byte FuelFlowPphRighPin = 13;
-const byte OilTempRightPin = 44;
-const byte OilPressRightPin = 46;
+const byte OilTempRightPin = 46;
+const byte OilPressRightPin = 44;
+
 const byte AirspeedPin = 45;
 
 // Masks
@@ -228,6 +230,10 @@ void writeData()
   }
 
   lastUpdate = currentUpdate;
+
+  if (!Serial.availableForWrite()) {
+    return;
+  }
 
   short value;
   for (int i = 0; i < outputMapSize; i++) {

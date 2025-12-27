@@ -48,6 +48,7 @@ namespace Simulator_Interface
         public void Start()
         {
             _continue = true;
+            _serialPort.PortName = settings.Communications.SerialPort;
             _serialPort.Open();
         }
 
